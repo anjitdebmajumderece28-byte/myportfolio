@@ -1,34 +1,47 @@
-import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "My portfolio",
-  description: "ECE and CS projects",
+  title: "Anjit Deb Majumder — Electronics & Communication Engineer",
+  description:
+    "Portfolio of Anjit Deb Majumder — projects in embedded systems, frontend development, VLSI, FPGA, DSP, and creative engineering builds.",
+  openGraph: {
+    title: "Anjit Deb Majumder — Portfolio",
+    description:
+      "Explore engineering projects: embedded systems, FPGA builds, DSP work, and frontend showcases.",
+    url: "https://your-vercel-url.vercel.app",
+    images: [
+      {
+        url: "/images/sudo.png",
+        width: 1200,
+        height: 630,
+        alt: "Portfolio Preview",
+      },
+    ],
+    siteName: "Anjit Deb Majumder Portfolio",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Anjit Deb Majumder — Portfolio",
+    description:
+      "Projects in embedded systems, FPGA, DSP, VLSI, and frontend development.",
+    images: ["/images/sudo.png"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
-      </body>
+      <body>{children}</body>
     </html>
   );
 }
