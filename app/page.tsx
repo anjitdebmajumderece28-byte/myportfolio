@@ -143,7 +143,7 @@ export default function HomePage() {
       <footer id="contact" className="max-w-5xl mx-auto mt-12 border-t border-gray-900 pt-8 text-sm text-gray-300">
         <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-4">
           <div>
-            <p>Electronics & Communication Engineer with and interest in AI/ML and WebDev — open to internships & collaborations.</p>
+            <p>Electronics & Communication Engineer with an interest in AI/ML and WebDev — open to internships & collaborations.</p>
             <p className="mt-2">Email: <a href="mailto:you@example.com" className="underline">babianjit2004@gmail.com</a></p>
           </div>
           <div className="flex gap-3">
